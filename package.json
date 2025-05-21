@@ -1,0 +1,19 @@
+{
+  "name": "chromium-bug",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install-browser-chrome": "browsers install chrome@stable",
+    "install-browser-chromium": "browsers install chromium@latest",
+    "start": "node start.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@puppeteer/browsers": "^2.10.5",
+    "glob": "^11.0.2",
+    "puppeteer-core": "^24.9.0"
+  }
+}
