@@ -20,6 +20,10 @@ function getBrowserExecutable() {
   }
 }
 
+function getURL(page){
+    return Promise.resolve(page.url());
+  }
+
 async function start() {
   const browser = puppeteer.launch({
           args: [
@@ -36,8 +40,9 @@ async function start() {
         });
 
     const page = await (await browser).newPage()
-    const url = page.url();
+    const url = await getURL(page);
     console.log("url", url);
+    await (await browser).close()
 }
 
-start();
+await start();
